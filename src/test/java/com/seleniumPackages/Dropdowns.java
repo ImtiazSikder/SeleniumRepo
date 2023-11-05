@@ -18,6 +18,7 @@ public class Dropdowns {
 		driver.get("https://demo.nopcommerce.com/register");
 		
 		WebElement element=driver.findElement(By.name("DateOfBirthDay"));		
+		//Calling the Method
 		selectDropDown(element, "14");
 	
 	}
