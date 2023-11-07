@@ -17,23 +17,12 @@ public class Dropdowns {
 		driver = new FirefoxDriver();
 		driver.get("https://demo.nopcommerce.com/register");
 		
-		WebElement element=driver.findElement(By.name("DateOfBirthDay"));		
-		selectDropDown(element, "14");
+	
 	
 	}
 	
 	
-	public static void selectDropDown(WebElement ele, String value) {
-		Select select=new Select(ele);
-		List<WebElement> allOptions=select.getOptions();
-		
-		for(int i=0; i<allOptions.size(); i++) {
-			if(allOptions.get(i).getText().equals(value)){
-				allOptions.get(i).click();
-				break;
-			}
-		}
-	}
+	
 	
 	
 

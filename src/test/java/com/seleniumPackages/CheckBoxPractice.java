@@ -19,16 +19,14 @@ public class CheckBoxPractice {
 		driver.get("https://testautomationpractice.blogspot.com/");
 		
 		
-		//Select Sunday)
-		
-		
+		//Select Sunday)	
 		
 		//Select all Check Boxes
-	
-		//List<WebElement> listEle=driver.findElements(By.xpath("//input[@type='checkbox' and contains (@id,'day')]"));
-	
 		
-		
+		List<WebElement> allChecks=driver.findElements(By.xpath("//input[@type='checkbox' and contains (@id,'day')]"));
+		for(int i=0; i<allChecks.size(); i++) {
+			allChecks.get(i).click();			
+		}
 		
 		
 		//Select last 3 check boxes	
@@ -37,6 +35,7 @@ public class CheckBoxPractice {
 		
 		
 		//Select only 'Friday' and 'Sunday'
+		/*
 		List<WebElement> eleChecks=driver.findElements(By.xpath("//input[@type='checkbox' and contains (@id,'day')]"));
 		
 		for(WebElement check: eleChecks) {
@@ -46,7 +45,7 @@ public class CheckBoxPractice {
 			}
 		}
 
-		
+		*/
 	}
 		
 		

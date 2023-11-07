@@ -124,7 +124,7 @@ public class WebTable_Demo {
 //		//*[@id="customers"]/tbody/tr[7]/td[1]
 //		
 //		List<WebElement> allRows=driver.findElements(By.xpath("//*[@id=\"customers\"]/tbody/tr"));
-//		int rowCount=allRows.size();
+//		int rowCount=allRows.size();						  
 //		System.out.println("Total rows are: " + rowCount);
 //		
 //		String beforeXPath="//*[@id=\'customers\']/tbody/tr[";
