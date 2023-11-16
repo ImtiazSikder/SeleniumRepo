@@ -38,7 +38,7 @@ public class AlertMethods {
 		//Clicking on Button
 		driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
 		//Calling the method
-		sendKeysMethoda("Welcome");
+		//sendKeysMethoda("Welcome");
 			
 	}
 	
@@ -49,12 +49,12 @@ public class AlertMethods {
 	//Methods;	
 	//===============================	
  
-	public static void sendKeysMethoda(String value) {
-		Alert alert=driver.switchTo().alert();
-		alert.sendKeys(value);
-		alert.accept();
-	}
-	
+//	public static void sendKeysMethoda(String value) {
+//		Alert alert=driver.switchTo().alert();
+//		alert.sendKeys(value);
+//		alert.accept();
+//	}
+//	
 	
 	
 }
