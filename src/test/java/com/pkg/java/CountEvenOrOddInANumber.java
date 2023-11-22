@@ -5,14 +5,13 @@ public class CountEvenOrOddInANumber {
 	public static void main(String[] args) {
 		
 		//Count number of Even or Odd in a number
-	
+		
 		int num=123456;
 		int evenCount=0;
 		int oddCount=0;
 		
 		while(num>0) {
 			int rem=num%10;
-			
 			if(rem%2==0) {
 				evenCount++;
 			}else {
@@ -20,9 +19,8 @@ public class CountEvenOrOddInANumber {
 			}
 			num=num/10;
 		}
-		
-		System.out.println("Number of Even count: "+ evenCount);
-		System.out.println("Number of Odd count: "+ oddCount);
+		System.out.println("Number of evenCount: " + evenCount);
+		System.out.println("Number of oddCount: "+ oddCount);
 		
 	}
 }

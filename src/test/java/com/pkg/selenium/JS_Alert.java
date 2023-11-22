@@ -21,17 +21,34 @@ public class JS_Alert {
 		
 		//Click on Button
 		driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
-		sendKeysAlert();
 		
-			 
-		 }
+		Alert alert= driver.switchTo().alert();
+		alert.sendKeys("Welcome Home");
+		alert.accept();
+	}
 	
 	
-		public static void sendKeysAlert() {
-			Alert alert=driver.switchTo().alert();
-			alert.sendKeys("Welcome");
-			alert.accept();
-		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//		public static void sendKeysAlert() {
+//			Alert alert=driver.switchTo().alert();
+//			alert.sendKeys("Welcome");
+//			alert.accept();
+//		}
 	
 	
 	

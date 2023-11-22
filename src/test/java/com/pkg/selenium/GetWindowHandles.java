@@ -21,15 +21,15 @@ public class GetWindowHandles {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[text()='OrangeHRM, Inc']")).click();
 		
-		Thread.sleep(5000);
-		
+		Thread.sleep(5000);	
 		Set<String> windowIDs=driver.getWindowHandles();
-		List<String> listWindowIDs=new ArrayList<String>(windowIDs);
+		List<String> listWindowIDs=new ArrayList<String>(windowIDs);//converting Set to List
 		
 		for(String winIDs: listWindowIDs) {
 			String title=driver.switchTo().window(winIDs).getTitle();
 			System.out.println(title);
 		}
+		
 	}
 }
 

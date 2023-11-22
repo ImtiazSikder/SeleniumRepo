@@ -20,16 +20,16 @@ public class WebTable2 {
 		//driver.get("https://www.w3schools.com/html/html_tables.asp");
 		driver.get("https://money.rediff.com/gainers/bse/daily/groupa?src=gain_lose");		
 
+	
 		List<WebElement> names=driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr/td[1]"));
 		List<WebElement> prices=driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr/td[4]"));
 		
-		for(int i=0; i<names.size(); i++) {
-			if(names.get(i).getText().equals("Indian Bank")) {
-				System.out.println(names.get(i).getText()+"-----"+prices.get(i).getText());
+		System.out.println(names.size());
+		for(int i=2; i<names.size(); i++) {
+			if(names.get(i).getText().equals("PCBL")) {
+				System.out.println(names.get(i).getText()+"-- found at Row nunber --> "+ (i-1));
 			}
 		}
-		
-		
 	}
 }
 		

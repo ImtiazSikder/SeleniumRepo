@@ -16,24 +16,20 @@ public class Dropdowns {
 		
 		driver = new FirefoxDriver();
 		driver.get("https://demo.nopcommerce.com/register");
-		
-		WebElement element=driver.findElement(By.xpath("//select[@name='DateOfBirthDay']"));
-		selectDropDown(element, "16");
-		
+	
+		List<WebElement> elements=driver.findElements(By.tagName("a"));
+		findLinks(elements,"YouTube");
 	}
 	
-	public static void selectDropDown(WebElement options, String value) {
-		
-		Select select=new Select(options);
-		List<WebElement> allOptions=select.getOptions();
-		
-		for(int i=0; i<allOptions.size(); i++) {
-			if(allOptions.get(i).getText().equals(value)) {
-				allOptions.get(i).click();
+	//Display All the Links 
+		public static void findLinks(List<WebElement> eleLinks , String values) {
+			for(int i=0; i<eleLinks.size(); i++) {
+				if(eleLinks.get(i).getText().equals(values)) {
+					System.out.println(eleLinks.get(i).getText()+"  Found at Position " + (i+1));
+					break;
+				}
 			}
 		}
-	}
-	
 	
 	
 
