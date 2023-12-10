@@ -23,13 +23,13 @@ public class WebTable2 {
 	
 		List<WebElement> names=driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr/td[1]"));
 		List<WebElement> prices=driver.findElements(By.xpath("//table[@class='dataTable']/tbody/tr/td[4]"));
-		
-		System.out.println(names.size());
-		for(int i=2; i<names.size(); i++) {
-			if(names.get(i).getText().equals("PCBL")) {
-				System.out.println(names.get(i).getText()+"-- found at Row nunber --> "+ (i-1));
+	
+		for(int i=0; i<names.size(); i++) {
+			if(names.get(i).getText().equals("Sobha")) {
+				System.out.println(names.get(i).getText()+"----------"+prices.get(i).getText());
 			}
 		}
+		
 	}
 }
 		

@@ -16,22 +16,27 @@ public class Dropdowns {
 		
 		driver = new FirefoxDriver();
 		driver.get("https://demo.nopcommerce.com/register");
-	
-		List<WebElement> elements=driver.findElements(By.tagName("a"));
-		findLinks(elements,"YouTube");
+		
+		WebElement ele=driver.findElement(By.xpath("//select[@name='DateOfBirthDay']"));
+		selectDropDown(ele, "17");
+		WebElement ele2=driver.findElement(By.xpath("//select[@name='DateOfBirthMonth']"));
+		selectDropDown(ele2, "December");
 	}
 	
-	//Display All the Links 
-		public static void findLinks(List<WebElement> eleLinks , String values) {
-			for(int i=0; i<eleLinks.size(); i++) {
-				if(eleLinks.get(i).getText().equals(values)) {
-					System.out.println(eleLinks.get(i).getText()+"  Found at Position " + (i+1));
-					break;
-				}
+	public static void selectDropDown(WebElement element, String value) {
+		Select select=new Select(element);
+		List<WebElement> allOptions=select.getOptions();
+		
+		for(int i=1; i<allOptions.size(); i++) {
+			if(allOptions.get(i).getText().equals(value)) {
+				allOptions.get(i).click();
 			}
 		}
+	}
+}
+	//Display All the Links 
+		
 	
-	
 
 		
 		
@@ -66,7 +71,39 @@ public class Dropdowns {
 
 
 
-
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
+		
+		public static void main(String[] args) {
+			
+			WebDriver driver;
+			
+			driver = new FirefoxDriver();
+			driver.get("https://demo.nopcommerce.com/register");
+		
+			List<WebElement> elements=driver.findElements(By.tagName("a"));
+			findLinks(elements,"YouTube");
+		}
+		
+		//Display All the Links 
+			public static void findLinks(List<WebElement> eleLinks , String values) {
+				for(int i=0; i<eleLinks.size(); i++) {
+					if(eleLinks.get(i).getText().equals(values)) {
+						System.out.println(eleLinks.get(i).getText()+"  Found at Position " + (i+1));
+						break;
+					}
+				}
+			}
+		
+*/
 
 //
 //WebElement eleDay=driver.findElement(By.name("DateOfBirthDay"));
@@ -213,7 +250,7 @@ public class Dropdowns {
 		
 //	}	
 	
-		public static void selectOptionFromDropDown(WebElement ele, String value){
+		/*public static void selectOptionFromDropDown(WebElement ele, String value){
 			Select select=new Select(ele);
 			List<WebElement> allOptions=select.getOptions();
 			
@@ -226,7 +263,7 @@ public class Dropdowns {
 		}
 		}
 	
-		
+		*/
 		
 		
 

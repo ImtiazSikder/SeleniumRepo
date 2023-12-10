@@ -48,24 +48,29 @@ public class BootstrapDropdown {
 			robot.keyRelease(KeyEvent.VK_CONTROL);
 		}	
 
+		
+		
+		
+		
+		
 		//Selecting Dropdown.
 		driver.findElement(By.xpath("//div[@class='dropdown-active-item product-category-active']")).click();
 		
-		List<WebElement> allOptions=driver.findElements(By.xpath("//ul[@class='product-tab-list product-category-list dropdown-active']/li"));	
+		List<WebElement> listOptions=driver.findElements(By.xpath("//ul[@class='product-tab-list product-category-list dropdown-active']/li"));
+		selectDropDown(listOptions, "Refinance");
+		
 	
-		for(int i=0; i<allOptions.size(); i++) {
-			System.out.println(allOptions.get(i).getText());
-			
-			if(allOptions.get(i).getText().equals("Refinance")) {
-				allOptions.get(i).click();
-				break;
-				
-			}
-	
-		}
 	}
 	
-	
+	public static void selectDropDown(List<WebElement> element, String value) {
+		for(int i=0; i<element.size(); i++) {
+			
+			if(element.get(i).getText().equals(value)){
+				element.get(i).click();
+				break;
+			}
+		}
+	}
 		
 	
 }	
