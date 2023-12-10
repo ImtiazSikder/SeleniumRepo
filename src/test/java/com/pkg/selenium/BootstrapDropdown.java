@@ -16,7 +16,7 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class BootstrapDropdown {
 	static WebDriver driver;
-	
+	//This is Boo
 	public static void main(String[] args) throws Exception {
 		System.out.println("Thi is Bootstrap");
 		//For Firefox
@@ -61,7 +61,7 @@ public class BootstrapDropdown {
 		
 	
 	}
-	
+	//This is latest code
 	public static void selectDropDown(List<WebElement> element, String value) {
 		for(int i=0; i<element.size(); i++) {
 			

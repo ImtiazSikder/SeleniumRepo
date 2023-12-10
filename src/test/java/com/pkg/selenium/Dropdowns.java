@@ -17,10 +17,17 @@ public class Dropdowns {
 		driver = new FirefoxDriver();
 		driver.get("https://demo.nopcommerce.com/register");
 		
+<<<<<<< HEAD:src/test/java/com/pkg/selenium/Dropdowns.java
 		WebElement ele=driver.findElement(By.xpath("//select[@name='DateOfBirthDay']"));
 		selectDropDown(ele, "17");
 		WebElement ele2=driver.findElement(By.xpath("//select[@name='DateOfBirthMonth']"));
 		selectDropDown(ele2, "December");
+=======
+		WebElement element=driver.findElement(By.name("DateOfBirthDay"));		
+		//Calling the Method
+		selectDropDown(element, "14");
+	
+>>>>>>> 82d4d27354bf0291c47f0f4e54213648d1798f2e:src/test/java/com/seleniumPackages/Dropdowns.java
 	}
 	
 	public static void selectDropDown(WebElement element, String value) {
